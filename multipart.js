@@ -17,9 +17,9 @@
 			 Twitter: @AmazonAwsChile
  */
 exports.Parse = function(multipartBodyBuffer,boundary){
-  console.log('parsing ')
+  //console.log('parsing ')
 	var process = function(part){
-          console.log('processing part ', part)
+          //console.log('processing part ', part)
 		// will transform this object:
 		// { header: 'Content-Disposition: form-data; name="uploads[]"; filename="A.txt"',
 		//	 info: 'Content-Type: text/plain',
@@ -27,7 +27,7 @@ exports.Parse = function(multipartBodyBuffer,boundary){
 		// into this one:
 		// { filename: 'A.txt', type: 'text/plain', data: <Buffer 41 41 41 41 42 42 42 42> }
 		var obj = function(str){
-                  console.log('object str ', str)
+                  //console.log('object str ', str)
 			var k = str.split('=');
 			var a = k[0].trim();
 			var b = JSON.parse(k[1].trim());
